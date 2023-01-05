@@ -15,7 +15,9 @@ const Formulario = () => {
   const [inputs, setInputs] = useState({
     nombre: "",
     apellido: "",
-    dni: ""
+    dni: "",
+    tipo: "",
+    matricula: ""
   })
 
   //Funcion para setear las variables
@@ -32,15 +34,26 @@ const Formulario = () => {
     setInputs({
       nombre: "",
       apellido: "",
-      dni: ""
+      dni: "",
+      tipo: "",
+      matricula: ""
     })
   }
 
   return (
-    <div className='section m-5'>
-      <h2>
-        Formulario Page
-      </h2>
+    <div className='section'>
+      
+      <div className='text-center'>
+        <h1>
+          Evento Nacional 14/02/2023
+        </h1>
+        <h4>
+          Pasadas aereas, aterrizajes de precision, vuelo en formacion y mucho mas!
+        </h4>
+        <span>
+          Si usted quiere participar de dicho evento, es obligatoriamente requerido completar el siguiente formulario con los datos correctos. <br /> Para mas informacion comunicarse al 11-0000-0000
+        </span>
+      </div>
 
         {Object.keys(inputs).map((key, index) => (
           <Form.Group className="mb-3" key={index}>
@@ -56,9 +69,9 @@ const Formulario = () => {
           </Form.Group>
         ))}
 
-        <div className="text-center w-50">
+        <div className="text-center">
           <Button variant="primary" type="submit" onClick={handleClick}>
-            Submit
+            Enviar Datos
           </Button>
         </div>
 

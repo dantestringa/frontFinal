@@ -1,6 +1,7 @@
 import { NavLink, Outlet } from 'react-router-dom';
 import React from 'react'
 
+
 const Layout = () => {
     return (
         <nav className="navbar">
@@ -8,39 +9,26 @@ const Layout = () => {
                 to='/'
                 className={({isActive}) => (isActive ? 'link active' : 'link')}
             >
-                Home
+                Inicio
             </NavLink>
             <NavLink 
-                to='/about'
+                to='/escuela'
                 className={({isActive}) => (isActive ? 'link active' : 'link')}
             >
-                About
-            </NavLink>
-            <NavLink 
-                to='/productos'
-                className={({isActive}) => (isActive ? 'link active' : 'link')}
-            >
-                Productos
-            </NavLink> 
-            <NavLink 
-                to='/api'
-                className={({isActive}) => (isActive ? 'link active' : 'link')}
-            >
-                Api
+                Cursos teoricos
             </NavLink>
             <NavLink 
                 to='/formulario'
                 className={({isActive}) => (isActive ? 'link active' : 'link')}
             >
-                Formulario
+                Evento 2023
             </NavLink> 
             <NavLink 
-                to='/otro'
+                to='/lista'
                 className={({isActive}) => (isActive ? 'link active' : 'link')}
             >
-                OtroAbout
+                Lista de Inscriptos al Evento
             </NavLink>
-
             <Outlet />
             
         </nav>

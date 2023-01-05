@@ -1,11 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Error from './Pages/Error'
 import Home from './Pages/Home'
-import About from './Pages/About'
-import Api from "./Pages/Api";
-import Productos from "./Pages/Productos";
+import Lista from './Pages/Lista'
 import Formulario from "./Pages/Formulario";
-import Otro from "./Pages/Otro";
+import Escuela from "./Pages/Escuela";
 import Layout from "./Componentes/Layout";
 
 function App() {
@@ -14,11 +12,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/api' element={<Api />} />
-          <Route path='/productos' element={<Productos />} />
+          <Route path='/lista' element={<Lista />} />
           <Route path='/formulario' element={<Formulario />} />
-          <Route path='/otro' element={<Otro />} />
+          <Route path='/escuela' element={<Escuela />} />
           <Route path='*' errorElement={<Error />} />
         </Route>
       </Routes>
