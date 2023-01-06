@@ -137,7 +137,7 @@ const Home = () => {
             </Card.Text>
           </Card.Body>
         </Card>
-      </div>
+        </div>
     </div>
   )
 }

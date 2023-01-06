@@ -1,10 +1,17 @@
 import { NavLink, Outlet } from 'react-router-dom';
 import React from 'react'
+import cualogo from '../images/cualogo.png'
 
 
 const Layout = () => {
     return (
         <nav className="navbar">
+            <NavLink 
+                to='/'
+                className={({isActive}) => (isActive ? 'link active' : 'link')}
+            >
+                <img src={cualogo} alt="" width={200} height={100}/>
+            </NavLink>
             <NavLink 
                 to='/'
                 className={({isActive}) => (isActive ? 'link active' : 'link')}
